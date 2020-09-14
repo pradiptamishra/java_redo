@@ -2,8 +2,7 @@ package BinaryGap.src.com.codility;
 
 import java.lang.*;
 import java.text.NumberFormat;
-import java.util.Date;
-import java.util.Scanner;
+import java.util.*;
 
 class Solution {
     public int gapMax() {
@@ -26,6 +25,25 @@ class Solution {
             }
         }
         return gapmax;
+    }
+
+    public int leastPositive(int[] A) {
+        //int L = A.length;
+        //Arrays.sort(A);
+        ArrayList<Integer> arrayList = new ArrayList<Integer>();
+        for (int j : A) {
+            if (j > 0) {
+                arrayList.add(j);
+            }
+        }
+        int leastP=0;
+        while (true){
+            leastP=leastP+1;
+            if (!arrayList.contains(leastP)){
+                break;
+            }
+        }
+        return leastP;
     }
 
     public double mortgageAmt(){
